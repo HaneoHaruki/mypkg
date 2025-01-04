@@ -6,7 +6,7 @@
 ### weatherpublisherノード  
 - トピック名: 'weatherpublisher'  
 
-- 2秒ごとに以下のように情報を出力します:  
+- 1秒ごとに以下のように情報を出力します:  
 ```
 気温: XX.X℃  湿度: YY.Y%  
 ```
@@ -53,8 +53,27 @@ ros2 topic echo weatherpublisher
 
 ## 実行例  
 ### 送り手の実行例  
+```
+[INFO] [1736017821.465978037] [weather_publisher]: Published: 気温: 16.45°C, 湿度: 60%
+[INFO] [1736017822.445411227] [weather_publisher]: Published: 気温: 16.45°C, 湿度: 60%
+[INFO] [1736017823.441732505] [weather_publisher]: Published: 気温: 16.45°C, 湿度: 60%
+[INFO] [1736017824.465051694] [weather_publisher]: Published: 気温: 16.45°C, 湿度: 60%
+[INFO] [1736017825.497072051] [weather_publisher]: Published: 気温: 15.85°C, 湿度: 64%
+```
 
 ### 受け取り手の実行例  
+```
+data: '気温: 16.45°C, 湿度: 60%'
+---
+data: '気温: 16.45°C, 湿度: 60%'
+---
+data: '気温: 16.45°C, 湿度: 60%'
+---
+data: '気温: 16.45°C, 湿度: 60%'
+---
+data: '気温: 15.85°C, 湿度: 64%'
+---
+```
 
 ## 動作環境
 
