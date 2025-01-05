@@ -1,16 +1,8 @@
 # 沖縄の温度・湿度publisher  
+[![test](https://github.com/HaneoHaruki/robosyshomework2/actions/workflows/test.yml/badge.svg)](https://github.com/HaneoHaruki/robosyshomework2/actions/workflows/test.yml)
+##概要  
 
-このROS2パッケージは、現在の沖縄の気温と湿度の情報を表示できる機能があります。  
-
-## ノードの概要  
-### weatherpublisherノード  
-- トピック名: 'weatherpublisher'  
-
-- 1秒ごとに以下のように情報を出力します:  
-```
-気温: XX.X℃  湿度: YY.Y%  
-```
-- OpenWeatherMapサイトから沖縄の現在の気温と湿度を読み取り、それを表示します。  
+このROS2パッケージは、現在の沖縄の気温と湿度の情報を表示できる機能があります。気温はTemperature、湿度はHumidityとして表示されます。
 
 ## 使用方法  
 
@@ -40,25 +32,28 @@ ros2 topic echo weatherpublisher
 
 ### 実行例  
 ```
-data: '気温: 16.45°C, 湿度: 60%'
+data: 'Temperature: 16.57°C, Humidity: 96%'
 ---
-data: '気温: 16.45°C, 湿度: 60%'
+data: 'Temperature: 16.57°C, Humidity: 96%'
 ---
-data: '気温: 16.45°C, 湿度: 60%'
+data: 'Temperature: 16.57°C, Humidity: 96%'
 ---
-data: '気温: 16.45°C, 湿度: 60%'
+data: 'Temperature: 16.57°C, Humidity: 96%'
 ---
-data: '気温: 15.85°C, 湿度: 64%'
+data: 'Temperature: 19.35°C, Humidity: 80%'
+---
+data: 'Temperature: 16.57°C, Humidity: 96%'
 ---
 ```
 
 ## 動作環境
 
-- **OS**: Ubuntu 20.04 LTS
+- **OS**: Ubuntu 22.04 LTS
 
 ## ライセンス 
 
 - このソフトウェアは 3条項BSDライセンス の下で再頒布および使用が許可されています。
 
 ## Copyright  
+
 - ©2025 Haruki Haneo
