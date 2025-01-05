@@ -33,7 +33,7 @@ class WeatherPublisher(Node):
         temperature, humidity = self.get_weather_data()
         if temperature is not None and humidity is not None:
             msg = String()
-            msg.data = f'気温: {temperature}°C, 湿度: {humidity}%'
+            msg.data = f'Temperature: {temperature}°C, Humidity: {humidity}%'
             self.publisher_.publish(msg)
 
 def main(args=None):

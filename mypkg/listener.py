@@ -12,7 +12,7 @@ class Listener(Node):
             self.listener_callback,
             10
         )
-        self.get_logger().info('Listener ノードが起動しました')
+        self.get_logger().info('Listener node has been activated')
 
     def listener_callback(self, msg):
         self.get_logger().info(f'Received: {msg.data}')
