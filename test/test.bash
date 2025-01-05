@@ -6,7 +6,7 @@ dir=~
 cd $dir/ros2_ws
 colcon build
 source $dir/.bashrc
-timeout 10 ros2 launch mypkg test.launch.py > /tmp/mypkg.log
+timeout 15 ros2 launch mypkg weatherpublisher.launch.py > /tmp/mypkg.log
 
-cat /tmp/mypkg.log |
-grep '湿度'
+##cat /tmp/mypkg.log |
+grep '湿度:' /tmp/mypkg.log
