@@ -1,17 +1,17 @@
-import rclpy
+# SPDX-FileCopyrightText: 2025 Haruki Haneo
+# SPDX-License-Identifier: BSD-3-Clause
+
+import os
+import requests
 from rclpy.node import Node
 from std_msgs.msg import String
-import requests
-import json
-import os
-
+import rclpy
 
 class WeatherPublisher(Node):
     def __init__(self):
         super().__init__('weather_publisher')
         self.publisher_ = self.create_publisher(String, 'weatherpublisher', 10)
         self.timer = self.create_timer(1.0, self.publish_weather)
-        self.get_logger().info('Weather Publisher ノードが起動しました')
 
     def get_weather_data(self):
         try:
@@ -26,8 +26,7 @@ class WeatherPublisher(Node):
             temperature = weather_data['main']['temp']
             humidity = weather_data['main']['humidity']
             return temperature, humidity
-        except Exception as e:
-            self.get_logger().error(f'天気データの取得に失敗しました: {e}')
+        except Exception:
             return None, None
 
     def publish_weather(self):
@@ -36,9 +35,6 @@ class WeatherPublisher(Node):
             msg = String()
             msg.data = f'気温: {temperature}°C, 湿度: {humidity}%'
             self.publisher_.publish(msg)
-            self.get_logger().info(f'Published: {msg.data}')
-        else:
-            self.get_logger().warn('エラーが発生したため、天気データを公開できませんでした')
 
 def main(args=None):
     rclpy.init(args=args)
@@ -49,6 +45,7 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
 
 
 
