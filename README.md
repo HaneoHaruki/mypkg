@@ -1,33 +1,36 @@
 # 沖縄の温度・湿度publisher  
-[![test](https://github.com/HaneoHaruki/robosyshomework2/actions/workflows/test.yml/badge.svg)](https://github.com/HaneoHaruki/robosyshomework2/actions/workflows/test.yml)
-##概要  
+[![test](https://github.com/HaneoHaruki/robosyshomework2/actions/workflows/test.yml/badge.svg)](https://github.com/HaneoHaruki/robosyshomework2/actions/workflows/test.yml)  
+
+## 概要  
 
 このROS2パッケージは、現在の沖縄の気温と湿度の情報を表示できる機能があります。気温はTemperature、湿度はHumidityとして表示されます。
 
 ## 使用方法  
 
-1.ビルドします。  
+1.ros2_wsでビルドします。  
 ```
-cd ~/ros2_ws  
+$ cd ~/ros2_ws  
 ```
 ```
-colcon build  
+$ colcon build  
 ```
 
 2.ワークスペースをソース  
 ```
-source ~/ros2_ws/install/setup.bash  
+$ source ~/.bashrc  
 ```
 
 ## ノードを実行  
 ### 実行コマンド  
 ### 送り手  
 ```
-ros2 run mypkg weatherpublisher  
+$ ros2 run mypkg weatherpublisher  
 ```
+
 ### 受け取り手  
+
 ```
-ros2 topic echo weatherpublisher  
+$ ros2 topic echo weatherpublisher  
 ```
 
 ### 実行例  
