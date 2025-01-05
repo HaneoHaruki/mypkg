@@ -7,7 +7,7 @@ dir=~
 
 cd $dir/ros2_ws
 colcon build
-source $dir/ros2_ws/install/setup.bash
+source $dir/.bashrc
 timeout 30 ros2 launch mypkg weatherpublisher.launch.py > /tmp/mypkg.log
 
 cat /tmp/mypkg.log |
