@@ -8,7 +8,7 @@
 ## 依存関係  
 
 パッケージを動かすために必要なライブラリ
-- 'requests':HTTPれクエストを処理するために必要
+- `requests`:HTTPリクエストを処理するために必要
 ```
 $ pip install requests
 ```
@@ -16,8 +16,8 @@ $ pip install requests
 ## 使用方法  
 ## 実行準備  
 
-1.https://openweathermap.org/でアカウントを作成してAPIキーを取得して下さい。
-2.環境変数を設定:
+1.[openweathermap.org]https://openweathermap.org/でアカウントを作成してAPIキーを取得して下さい。  
+2.環境変数を設定:  
 ```
 $ echo "export WEA_API_KEY='取得したAPIキー'" >> ~/.bashrc
 $ source ~/.bashrc
@@ -60,5 +60,5 @@ data: 'Temperature: 16.57°C, Humidity: 96%'
 ## ライセンス 
 
 - このソフトウェアは 3条項BSDライセンス の下で再頒布および使用が許可されています。
-= 詳細はhttps://github.com/HaneoHaruki/mypkg/blob/main/LICENSEを確認して下さい。
+= 詳細は[LISENCE]https://github.com/HaneoHaruki/mypkg/blob/main/LICENSEを確認して下さい。
 - ©2025 Haruki Haneo
