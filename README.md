@@ -52,6 +52,10 @@ data: 'Temperature: 16.57°C, Humidity: 96%'
 ---
 ```
 
+## テスト用コード  
+- `listener.py`  
+- `weatherpublisher.launch.py`  
+
 ## 動作環境
 このパッケージは以下の環境で動作が確認済みです。
 - **OS**: Ubuntu 22.04 LTS
