@@ -5,29 +5,32 @@
 
 このROS2パッケージは、現在の沖縄の気温と湿度の情報を表示できる機能があります。気温はTemperature、湿度はHumidityとして表示されます。
 
+## 依存関係  
+
+パッケージを動かすために必要なライブラリ
+- 'requests':HTTPれクエストを処理するために必要
+```
+$ pip install requests
+```
+
 ## 使用方法  
+## 実行準備  
 
-1.ros2_wsでビルドします。  
+1.https://openweathermap.org/でアカウントを作成してAPIキーを取得して下さい。
+2.環境変数を設定:
 ```
-$ cd ~/ros2_ws  
-```
-```
-$ colcon build  
-```
-
-2.ワークスペースをソース  
-```
-$ source ~/.bashrc  
+$ echo "export WEA_API_KEY='取得したAPIキー'" >> ~/.bashrc
+$ source ~/.bashrc
 ```
 
 ## ノードを実行  
-### 実行コマンド  
-### 送り手  
+### weatherpublisher.pyの実行
 ```
 $ ros2 run mypkg weatherpublisher  
 ```
 
-### 受け取り手  
+### データの確認  
+別の端末で以下を実行してトピックのデータを表示します。
 
 ```
 $ ros2 topic echo weatherpublisher  
@@ -50,13 +53,12 @@ data: 'Temperature: 16.57°C, Humidity: 96%'
 ```
 
 ## 動作環境
-
+このパッケージは以下の環境で動作が確認済みです。
 - **OS**: Ubuntu 22.04 LTS
+- ROS2 humble
 
 ## ライセンス 
 
 - このソフトウェアは 3条項BSDライセンス の下で再頒布および使用が許可されています。
-
-## Copyright  
-
+= 詳細はhttps://github.com/HaneoHaruki/mypkg/blob/main/LICENSEを確認して下さい。
 - ©2025 Haruki Haneo
