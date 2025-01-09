@@ -60,5 +60,5 @@ data: 'Temperature: 16.57°C, Humidity: 96%'
 ## ライセンス 
 
 - このソフトウェアは 3条項BSDライセンス の下で再頒布および使用が許可されています。
-= 詳細は[LISENCE](https://github.com/HaneoHaruki/mypkg/blob/main/LICENSE)を確認して下さい。
+- 詳細は[LISENCE](https://github.com/HaneoHaruki/mypkg/blob/main/LICENSE)を確認して下さい。
 - ©2025 Haruki Haneo
